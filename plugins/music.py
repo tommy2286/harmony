@@ -39,7 +39,7 @@ ytdl_format_options = {
 }
 
 ytdl = youtube_dl.YoutubeDL(ytdl_format_options)
-YOUTUBE_API_KEY = os.getenv.get("YOUTUBE_API_KEY")
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 
 
 class YTDLSource:
