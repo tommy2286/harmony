@@ -5,9 +5,6 @@ import os
 import inspect
 import aiohttp
 
-DISCORDBOTS_API = os.getenv.get("DISCORDBOTS_KEY")
-EMBED_COLOUR = 0x19868A
-
 class Bot(commands.Bot):
 
     INSTALLED_PLUGINS = [
@@ -131,7 +128,7 @@ def main():
     token = os.environ.get("HARMONY_TOKEN")
     if not token:
         token = open("token.txt").read().strip()
-    bot.run(os.getenv.get("HARMONY_TOKEN"))
+    bot.run(os.getenv("HARMONY_TOKEN"))
 
 if __name__ == "__main__":
     main()
