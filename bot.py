@@ -125,11 +125,6 @@ class Bot(commands.Bot):
         await self.set_playing()
 
 
-def main():
-    bot = Bot(">")
-    bot.load(*Bot.INSTALLED_PLUGINS)
+
     token = os.environ.get("HARMONY_TOKEN")
     bot.run(token)
-
-if __name__ == "__main__":
-    main()
