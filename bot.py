@@ -125,6 +125,13 @@ class Bot(commands.Bot):
         await self.set_playing()
 
 
-
+def main():
+    bot = Bot(">")
+    bot.load(*Bot.INSTALLED_PLUGINS)
     token = os.environ.get("HARMONY_TOKEN")
+    if not token:
+        token = open("token.txt").read().strip()
     bot.run(token)
+
+if __name__ == "__main__":
+    main()
