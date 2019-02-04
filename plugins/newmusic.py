@@ -31,7 +31,7 @@ YOUTUBE_DL_OPTIONS = {
 # Suppress noise about console usage from errors
 youtube_dl.utils.bug_reports_message = lambda: ''
 
-api_keys = {"youtube": os.getenv.get("YOUTUBE_API_KEY", "")}
+api_keys = {"youtube": os.getenv("YOUTUBE_API_KEY", "")}
 
 
 class QueueEmpty(Exception):
