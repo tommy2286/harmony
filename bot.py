@@ -125,9 +125,7 @@ class Bot(commands.Bot):
 def main():
     bot = Bot(">")
     bot.load(*Bot.INSTALLED_PLUGINS)
-    token = os.environ.get("HARMONY_TOKEN")
-    if not token:
-        token = open("token.txt").read().strip()
+ 
     bot.run(os.getenv("HARMONY_TOKEN"))
 
 if __name__ == "__main__":
