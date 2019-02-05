@@ -14,10 +14,10 @@ class Bot(commands.Bot):
         # "plugins.permissions"
     ]
 
-    def __init__(self, EMBED_COLOUR, command_symbol: str, *args, **kwargs):
+    def __init__(self, command_symbol: str, *args, **kwargs):
         self.log("Initialising")
         self.prefix = command_symbol
-        self.embed_colour = EMBED_COLOUR
+        self.embed_colour = Black
         super().__init__(command_prefix=self.get_prefixes, *args, **kwargs)
 
     def get_prefixes(self, bot, message):
